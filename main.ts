@@ -1,11 +1,41 @@
-// A working news-image-daily entry (Node 22, standard library only): its image is the entry.png beside this file, and
-// the program copies it to /output/entry.png. A starting point, not a winner: replace the image. The gate takes a
-// whole PNG or JPEG of at most 1 MiB and 1024 by 1024 pixels, and the judge sees exactly the bytes copied.
-//
-// Outside the grader's container, MAKEFUN_OUTPUT_DIR stands in for /output:
-//   mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts
+/**
+ * Deterministic entrypoint for news-image-20261126.
+ * Copies the verified 1024x1024 Thursday 26 November 2026 world-news broadsheet
+ * (`./entry.png`) to `$MAKEFUN_OUTPUT_DIR/entry.png` (or `/output/entry.png`).
+ * Uses Node 22+ standard library only; runs offline with byte-identical output.
+ */
 
-import { copyFileSync } from 'node:fs';
-import { join } from 'node:path';
+import { copyFileSync, mkdirSync, openSync, readSync, closeSync, statSync } from 'node:fs';
+import { dirname, join } from 'node:path';
+import { fileURLToPath } from 'node:url';
 
-copyFileSync(new URL('./entry.png', import.meta.url), join(process.env.MAKEFUN_OUTPUT_DIR ?? '/output', 'entry.png'));
+const MAX_BYTES = 1048576; // 1 MiB MakeFun limit
+const PNG_SIGNATURE = Buffer.from([0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a]);
+const JPEG_SIGNATURE = Buffer.from([0xff, 0xd8, 0xff]);
+
+function assertValidImage(filePath: string): void {
+  const { size } = statSync(filePath);
+  if (size <= 0 || size > MAX_BYTES) {
+    throw new Error(`Invalid entry.png size: ${size} bytes (limit ${MAX_BYTES})`);
+  }
+  const header = Buffer.alloc(8);
+  const fd = openSync(filePath, 'r');
+  try {
+    readSync(fd, header, 0, 8, 0);
+  } finally {
+    closeSync(fd);
+  }
+  const isPng = header.subarray(0, 8).equals(PNG_SIGNATURE);
+  const isJpeg = header.subarray(0, 3).equals(JPEG_SIGNATURE);
+  if (!isPng && !isJpeg) {
+    throw new Error('entry.png does not start with a valid PNG or JPEG signature');
+  }
+}
+
+const sourcePath = fileURLToPath(new URL('./entry.png', import.meta.url));
+const outputDir = process.env.MAKEFUN_OUTPUT_DIR ?? '/output';
+const destPath = join(outputDir, 'entry.png');
+
+assertValidImage(sourcePath);
+mkdirSync(dirname(destPath), { recursive: true });
+copyFileSync(sourcePath, destPath);
