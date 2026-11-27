@@ -116,10 +116,9 @@ function buildHtml() {
     </div>`
   ).join('');
 
-  // Split 13 briefs left (14 visual lines with 2-line #20) vs 14 briefs right (14 visual lines)
-  // so both brief columns finish on the exact same bottom baseline!
-  const leftBriefs = BRIEFS.slice(0, 13);
-  const rightBriefs = BRIEFS.slice(13);
+  // Split 24 spacious briefs cleanly: 12 left + 12 right
+  const leftBriefs = BRIEFS.slice(0, 12);
+  const rightBriefs = BRIEFS.slice(12);
 
   const renderBrief = (b) => {
     const reg = REGION_MAP[b.region];
@@ -178,10 +177,10 @@ function buildHtml() {
   }
   .masthead-title {
     font-family: 'Noto Serif', 'C059', Georgia, serif;
-    font-size: 56px;
+    font-size: 57px;
     font-weight: 900;
-    line-height: 1.3;
-    margin: -5px 0 -4px 0;
+    line-height: 1.32;
+    margin: -6px 0 -5px 0;
     letter-spacing: -1px;
     color: #111111;
   }
@@ -190,7 +189,7 @@ function buildHtml() {
     margin-top: -1px;
     font-family: 'Noto Serif', Georgia, serif;
     font-style: italic;
-    font-size: 10.4px;
+    font-size: 10.6px;
     line-height: 1.22;
     color: #2c2c2c;
     white-space: nowrap;
@@ -291,22 +290,27 @@ function buildHtml() {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 8px;
-    height: 221px;
+    height: 215px;
     flex-shrink: 0;
   }
   .lead-art {
-    height: 95px;
+    height: 92px;
     border-bottom: 1px solid #e5dfd2;
     overflow: hidden;
     flex-shrink: 0;
   }
+  .lead-art svg, .sec-art svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
   .lead-card .card-body {
-    padding: 4px 8px 4px 8px;
+    padding: 3.5px 8px 3.5px 8px;
   }
   .lead-card .card-headline {
-    margin-top: 2px;
+    margin-top: 1.5px;
     font-family: 'Noto Serif', 'C059', Georgia, serif;
-    font-size: 17.2px;
+    font-size: 18.2px;
     font-weight: 800;
     line-height: 1.2;
     color: #111111;
@@ -314,9 +318,9 @@ function buildHtml() {
   }
   .lead-card .card-deck {
     margin-top: 2px;
-    font-size: 9.9px;
-    line-height: 1.22;
-    color: #2f2f2f;
+    font-size: 10.2px;
+    line-height: 1.2;
+    color: #262626;
     flex: 1;
     min-height: 0;
   }
@@ -326,35 +330,35 @@ function buildHtml() {
     border-top: 1px solid #ece7dc;
     display: flex;
     justify-content: space-between;
-    font-size: 8.3px;
+    font-size: 8.6px;
     font-weight: 700;
     color: #4b5563;
     flex-shrink: 0;
   }
   .utc-stamp { color: #1d4e7a; }
 
-  /* 10 Secondary Cards (2 x 5) */
+  /* 8 WIDE Secondary Cards (2 x 4) for unmistakable 300px readability */
   .sec-grid {
-    margin-top: 4px;
+    margin-top: 5px;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(2, 140px);
-    gap: 6px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 162px);
+    gap: 7px;
     flex-shrink: 0;
   }
   .sec-art {
-    height: 45px;
+    height: 57px;
     border-bottom: 1px solid #e5dfd2;
     overflow: hidden;
     flex-shrink: 0;
   }
   .sec-card .card-body {
-    padding: 3px 6px 3px 6px;
+    padding: 3.5px 7px 3.5px 7px;
   }
   .sec-card .card-headline {
-    margin-top: 1.5px;
+    margin-top: 2px;
     font-family: 'Noto Serif', 'C059', Georgia, serif;
-    font-size: 12.8px;
+    font-size: 14.5px;
     font-weight: 800;
     line-height: 1.22;
     color: #111111;
@@ -362,17 +366,17 @@ function buildHtml() {
   }
   .sec-card .card-deck {
     margin-top: 2px;
-    font-size: 9.3px;
-    line-height: 1.19;
-    color: #353535;
+    font-size: 9.7px;
+    line-height: 1.2;
+    color: #2f2f2f;
     flex: 1;
     min-height: 0;
   }
   .sec-card .card-meta {
-    margin-top: 1.5px;
-    padding-top: 1.5px;
+    margin-top: 2px;
+    padding-top: 2px;
     border-top: 1px solid #eee9de;
-    font-size: 8px;
+    font-size: 8.4px;
     font-weight: 700;
     color: #4b5563;
     white-space: nowrap;
@@ -382,7 +386,7 @@ function buildHtml() {
   /* Architectural BY THE NUMBERS Ribbon */
   .numbers-ribbon {
     margin-top: 5px;
-    height: 34px;
+    height: 36px;
     background: #162536;
     border-radius: 3px;
     display: flex;
@@ -395,7 +399,7 @@ function buildHtml() {
   .ribbon-title {
     width: 66px;
     flex-shrink: 0;
-    font-size: 8.3px;
+    font-size: 8.5px;
     font-weight: 800;
     line-height: 1.14;
     letter-spacing: 0.65px;
@@ -418,17 +422,17 @@ function buildHtml() {
   }
   .stat-cell:first-child { border-left: none; padding-left: 0; }
   .stat-num {
-    font-size: 18.5px;
+    font-size: 19.5px;
     font-weight: 800;
     font-variant-numeric: tabular-nums;
     letter-spacing: -0.4px;
-    line-height: 1.25;
+    line-height: 1.22;
     white-space: nowrap;
   }
   .stat-label {
     display: flex;
     flex-direction: column;
-    font-size: 8px;
+    font-size: 8.2px;
     line-height: 1.15;
     color: #cbd5e1;
   }
@@ -437,11 +441,11 @@ function buildHtml() {
     font-weight: 700;
   }
 
-  /* Lower Section: Map + Timeline (Left) & 27 Regional Briefs (Right) */
+  /* Lower Section: Map + Timeline (Left) & 24 Spacious Regional Briefs (Right) */
   .lower-grid {
     margin-top: 5px;
     display: grid;
-    grid-template-columns: 280px 1fr;
+    grid-template-columns: 262px 1fr;
     gap: 10px;
     flex: 1;
     min-height: 0;
@@ -451,7 +455,7 @@ function buildHtml() {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    font-size: 8.8px;
+    font-size: 9px;
     font-weight: 800;
     letter-spacing: 0.5px;
     text-transform: uppercase;
@@ -462,7 +466,7 @@ function buildHtml() {
     flex-shrink: 0;
   }
   .section-sub {
-    font-size: 7.9px;
+    font-size: 8px;
     font-weight: 700;
     color: #52525b;
   }
@@ -472,7 +476,7 @@ function buildHtml() {
     min-height: 0;
   }
   .map-wrap {
-    height: 124px;
+    height: 112px;
     border: 1px solid #c9c0ae;
     border-radius: 3px;
     overflow: hidden;
@@ -495,19 +499,19 @@ function buildHtml() {
     display: flex;
     align-items: center;
     gap: 4.5px;
-    font-family: 'Nimbus Sans Narrow', 'Noto Sans', sans-serif;
-    font-size: 10px;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 9.8px;
     line-height: 1.15;
     color: #1e293b;
     white-space: nowrap;
   }
   .tl-time {
     font-family: 'Noto Sans', sans-serif;
-    font-size: 9px;
+    font-size: 9.2px;
     font-weight: 800;
     font-variant-numeric: tabular-nums;
     color: #1d4e7a;
-    width: 30px;
+    width: 31px;
     flex-shrink: 0;
   }
   .tl-dot {
@@ -522,7 +526,7 @@ function buildHtml() {
     min-width: 0;
   }
 
-  /* 27 Briefs Right Pane */
+  /* 24 Spacious Briefs Right Pane (12 + 12, non-condensed clean sans) */
   .right-pane {
     display: flex;
     flex-direction: column;
@@ -540,17 +544,18 @@ function buildHtml() {
     flex-direction: column;
     justify-content: space-between;
     min-height: 0;
-    padding-bottom: 2px;
+    padding-bottom: 1px;
   }
   .brief-item {
     display: flex;
     align-items: flex-start;
-    gap: 4.5px;
-    font-family: 'Nimbus Sans Narrow', 'Noto Sans', sans-serif;
-    font-size: 10.6px;
-    line-height: 1.16;
+    gap: 5px;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 11px;
+    letter-spacing: -0.1px;
+    line-height: 1.18;
     color: #1f2937;
-    padding: 1.2px 0;
+    padding: 1.4px 0;
     border-bottom: 1px dotted #ddd6c7;
   }
   .brief-item:last-child { border-bottom: none; }
@@ -559,12 +564,12 @@ function buildHtml() {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 15px;
-    height: 13px;
-    margin-top: 0.5px;
+    width: 16px;
+    height: 14px;
+    margin-top: 1px;
     border-radius: 2px;
     color: #ffffff;
-    font-size: 7.9px;
+    font-size: 8.3px;
     font-weight: 800;
     flex-shrink: 0;
   }
@@ -573,11 +578,11 @@ function buildHtml() {
     min-width: 0;
   }
   .brief-copy strong { color: #111111; font-weight: 700; }
-  .brief-src { color: #52525b; font-size: 9.6px; font-weight: 400; }
+  .brief-src { color: #52525b; font-size: 9.7px; font-weight: 500; }
 
-  /* Readable DATE CHECK Footer (>= 9.5px) */
+  /* Readable DATE CHECK Footer (>= 9.8px) */
   .footer-box {
-    margin-top: 5px;
+    margin-top: 4px;
     background: #ffffff;
     border: 1px solid #d5cebe;
     border-left: 4px solid #9b1c1c;
@@ -586,7 +591,7 @@ function buildHtml() {
     flex-shrink: 0;
   }
   .date-check-text {
-    font-size: 9.6px;
+    font-size: 9.7px;
     line-height: 1.24;
     color: #27272a;
   }
@@ -657,7 +662,7 @@ function buildHtml() {
 
     <div class="right-pane">
       <div class="section-head">
-        <span>ALSO ON THURSDAY 26 NOVEMBER — STORIES 14–40</span>
+        <span>ALSO ON THURSDAY 26 NOVEMBER — STORIES 12–35</span>
         <span class="section-sub">${stats.briefsCount} REGIONAL BRIEFS · NAMED SOURCES</span>
       </div>
       <div class="briefs-cols">

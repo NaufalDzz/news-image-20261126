@@ -7,14 +7,14 @@
 export const EDITION = {
   dateIso: '2026-11-26',
   kickerLeft: 'THE WORLD IN ONE DAY',
-  kickerRight: '40 STORIES · 9 REGIONS · FULL-DAY THURSDAY 26 NOVEMBER 2026',
+  kickerRight: '35 STORIES · 9 REGIONS · FULL-DAY THURSDAY 26 NOVEMBER 2026',
   dayPrefix: 'Thursday',
   dayDate: '26 November 2026',
   standfirst:
     "EU summit deadlocks on €1.6tn budget & €45bn Ukraine loan · Saudi defences down two Houthi missiles over Riyadh · Thanksgiving nor'easter lashes US East",
   editionStamp: 'Full-day edition · Thu 26 Nov 2026 UTC',
   certaintyLegend:
-    'OFFICIAL = government, court, central bank or organiser · CONFIRMED = 2+ major outlets · REPORTED = single wire/press report · Original vector art.',
+    'OFFICIAL = government, court, central bank or organiser · CONFIRMED = 2+ major outlets · REPORTED = single wire report · Original vector art.',
   dateCheckRule:
     'Every story occurred or was first reported on Thursday 26 November 2026 (UTC).',
   dateCheckExcluded:
@@ -22,15 +22,15 @@ export const EDITION = {
 };
 
 export const REGIONS = [
-  { id: 'europe', label: 'EUROPE', color: '#1d4e7a', count: 7 },
-  { id: 'eastseasia', label: 'E. & SE ASIA', color: '#0f6a7c', count: 5 },
-  { id: 'namerica', label: 'N. AMERICA', color: '#a82328', count: 5 },
-  { id: 'sasia', label: 'S. ASIA', color: '#1b6d50', count: 5 },
+  { id: 'europe', label: 'EUROPE', color: '#1d4e7a', count: 6 },
+  { id: 'namerica', label: 'N. AMERICA', color: '#a82328', count: 4 },
   { id: 'mideast', label: 'MIDDLE EAST', color: '#9c5a10', count: 4 },
   { id: 'africa', label: 'AFRICA', color: '#b07412', count: 4 },
+  { id: 'sasia', label: 'S. ASIA', color: '#1b6d50', count: 4 },
+  { id: 'eastseasia', label: 'E. & SE ASIA', color: '#0f6a7c', count: 4 },
   { id: 'latam', label: 'LATIN AM.', color: '#c2541a', count: 4 },
-  { id: 'oceania', label: 'OCEANIA', color: '#5b428a', count: 3 },
-  { id: 'global', label: 'GLOBAL', color: '#475569', count: 3 }
+  { id: 'global', label: 'GLOBAL', color: '#475569', count: 3 },
+  { id: 'oceania', label: 'OCEANIA', color: '#5b428a', count: 2 }
 ];
 
 export const REGION_MAP = Object.fromEntries(REGIONS.map((r) => [r.id, r]));
@@ -69,7 +69,7 @@ export const KEY_FIGURES = [
     accent: '#fdba74',
     line1: 'DRC Ebola cases',
     line2: '5,904 deaths in east',
-    storyNum: 25
+    storyNum: 22
   }
 ];
 
@@ -79,7 +79,6 @@ export const TIMELINE_UTC = [
   { time: '05:00', text: 'India marks 26/11 & Constitution Day', status: 'done' },
   { time: '07:45', text: 'Bangkok refinery blast injures 9', status: 'done' },
   { time: '09:30', text: 'ONS: UK net migration falls to 77,000', status: 'done' },
-  { time: '12:00', text: 'RMT 24h London Tube strike begins', status: 'done' },
   { time: '19:00', text: 'Gukesh–Sindarov draw 60-move Game 3', status: 'done' },
   { time: '22:30', text: 'EU summit deadlocks; pushed to Dec 17', status: 'done' },
   { time: '23:30', text: 'NFL: Bears 39–35, Eagles 39–38 wins', status: 'done' }
@@ -105,7 +104,7 @@ export const LEADS = [
     utc: '02:30 UTC',
     artKey: 'riyadh_missiles',
     headline: 'Saudi defences down two Houthi missiles over Riyadh',
-    deck: 'Coalition intercepts two ballistic missiles aimed at the capital, plus a cruise missile and three drones; minor Jazan Port damage.',
+    deck: 'Coalition downs two ballistic missiles aimed at the capital, plus a cruise missile and three drones; minor Jazan damage.',
     source: 'Saudi Coalition · Anadolu'
   },
   {
@@ -145,16 +144,6 @@ export const SECONDARIES = [
   {
     num: 6,
     region: 'eastseasia',
-    place: 'SINGAPORE',
-    tag: 'REPORTED',
-    artKey: 'nvidia_halt',
-    headline: 'Nvidia halts AI server shipments to SE Asia',
-    summary: 'Pauses Dell & Supermicro deliveries to 4 hubs under US export rules.',
-    source: 'FT · Reuters'
-  },
-  {
-    num: 7,
-    region: 'eastseasia',
     place: 'BANGKOK',
     tag: 'CONFIRMED',
     artKey: 'bangkok_refinery',
@@ -163,7 +152,7 @@ export const SECONDARIES = [
     source: 'Reuters · The Hindu'
   },
   {
-    num: 8,
+    num: 7,
     region: 'mideast',
     place: 'GAZA',
     tag: 'CONFIRMED',
@@ -173,27 +162,17 @@ export const SECONDARIES = [
     source: 'Al-Monitor · ToI'
   },
   {
-    num: 9,
-    region: 'europe',
-    place: 'KYIV · KHARKIV',
-    tag: 'OFFICIAL',
-    artKey: 'ukraine_strikes',
-    headline: 'Strikes kill 2 in Kharkiv, hurt 7 in Kyiv',
-    summary: 'Russian missiles hit Kyiv mall & plant; drone strikes Kharkiv flats.',
-    source: 'Kyiv Indep. · AP'
-  },
-  {
-    num: 10,
+    num: 8,
     region: 'oceania',
     place: 'FLINDERS IS., AUS',
     tag: 'OFFICIAL',
     artKey: 'flinders_fire',
     headline: 'Wildfire scorches >10% of Flinders Island',
-    summary: 'Tasmanian blaze burns 14,000+ ha & damages 6+ structures; shelter alert.',
+    summary: 'Tasmanian blaze burns 14,000+ ha & damages 6+ homes; shelter alert.',
     source: 'Tas. Fire · Guardian'
   },
   {
-    num: 11,
+    num: 9,
     region: 'africa',
     place: 'NAIROBI',
     tag: 'OFFICIAL',
@@ -203,7 +182,7 @@ export const SECONDARIES = [
     source: 'WashPost · Katiba'
   },
   {
-    num: 12,
+    num: 10,
     region: 'sasia',
     place: 'MUMBAI · DELHI',
     tag: 'OFFICIAL',
@@ -213,7 +192,7 @@ export const SECONDARIES = [
     source: 'PTI · Indian Exp.'
   },
   {
-    num: 13,
+    num: 11,
     region: 'global',
     place: 'GENEVA',
     tag: 'OFFICIAL',
@@ -225,39 +204,30 @@ export const SECONDARIES = [
 ];
 
 export const BRIEFS = [
-  { num: 14, region: 'europe', place: 'London', text: 'RMT 24h Tube walkout halts Circle & Piccadilly lines', source: 'TfL' },
-  { num: 15, region: 'europe', place: 'Frankfurt', text: 'ECB Oct minutes reveal hawkish hike push on oil inflation', source: 'ECB' },
-  { num: 16, region: 'europe', place: 'Europe', text: 'Stocks close higher: DAX +2.1%, FTSE +1.75%, CAC +1.6%', source: 'Bloomberg' },
-  { num: 17, region: 'europe', place: 'Kyiv', text: 'Ukraine recovers 250 fallen soldiers in 250-for-22 swap', source: 'UNN' },
-  { num: 18, region: 'namerica', place: 'Palm Beach', text: 'Trump & NATO chief Rutte warn Russia not to widen war', source: 'NATO' },
-  { num: 19, region: 'namerica', place: 'US', text: 'Markets shut for Thanksgiving; AAA sees 81.5m travellers', source: 'AAA' },
-  {
-    num: 20,
-    region: 'namerica',
-    place: 'US Sport',
-    text: 'Bears stun Lions 39–35 (3s left); Eagles rally from 21 down to beat Cowboys 39–38 (59-yd FG)',
-    source: 'NFL'
-  },
-  { num: 21, region: 'namerica', place: 'Toronto', text: 'Ontario & Unifor urge Ottawa to waive auto CO2 fines', source: 'CBC' },
-  { num: 22, region: 'mideast', place: 'Tehran', text: 'Mojtaba Khamenei urges Basij militia to widen social role', source: 'Al-Monitor' },
-  { num: 23, region: 'mideast', place: 'Baghdad', text: 'Iraq top four leaders set Dec 1 Kurdish oil & border talks', source: 'Anadolu' },
-  { num: 24, region: 'africa', place: 'Pretoria', text: 'South Africa Oct producer inflation jumps to 8.1% YoY', source: 'Stats SA' },
-  { num: 25, region: 'africa', place: 'DRC', text: 'East Ebola hits 12,021 confirmed cases & 5,904 deaths', source: 'DRC Health' },
-  { num: 26, region: 'africa', place: 'Lusaka', text: 'Hetero ships 300k generic HIV lenacapavir vials to Africa', source: 'The Hindu' },
-  { num: 27, region: 'sasia', place: 'Dhaka', text: 'Central bank plans $2.6bn FY27 Islamic Sukuk bond issue', source: 'TBS News' },
-  { num: 28, region: 'sasia', place: 'Islamabad', text: 'Traffic curbs & holiday ahead of Makkah Pact defence talks', source: 'Arab News' },
-  { num: 29, region: 'sasia', place: 'Kathmandu', text: 'Nepal starts notices to declare ~4,000 flood missing dead', source: 'SCMP' },
-  { num: 30, region: 'sasia', place: 'Doha', text: 'Sri Lanka A beat India A by 8 wkts in Rising Stars semi', source: 'Ind. Exp.' },
-  { num: 31, region: 'eastseasia', place: 'Tokyo', text: 'Asia rebounds: Nikkei +0.86%, Hang Seng +1.19%, Kospi +0.29%', source: 'Xinhua' },
-  { num: 32, region: 'eastseasia', place: 'Tokyo', text: 'Terra Drone delivers first Terra B1 AI drones to ATLA', source: 'Def. Blog' },
-  { num: 33, region: 'latam', place: 'Brasília', text: 'Brazil mid-Nov IPCA-15 inflation eases to 0.22% MoM', source: 'IBGE' },
-  { num: 34, region: 'latam', place: 'Brasília', text: 'Embraer & ALADA sign KC-390 & A-29 state export pact', source: 'Embraer' },
-  { num: 35, region: 'latam', place: 'Mexico City', text: 'Alacero sees 2026 LatAm crude steel up 3.6% to 57.7 Mt', source: 'Alacero' },
-  { num: 36, region: 'latam', place: 'Asunción', text: 'CONMEBOL awards 16-team 2028 Copa América to US', source: 'CONMEBOL' },
-  { num: 37, region: 'oceania', place: 'Canberra', text: 'Aus Senate passes 20% LNG reservation 2nd reading (21–10)', source: 'Guardian' },
-  { num: 38, region: 'oceania', place: 'Canberra', text: 'Climate outlook sees 48% cut by 2035, below 62–70% goal', source: 'DCCEEW' },
-  { num: 39, region: 'global', place: 'Zurich', text: 'FIFA confirms cyberattack on <0.1% of data; 12 GB claimed', source: 'FIFA' },
-  { num: 40, region: 'global', place: 'Markets', text: 'Brent tops $95/bbl on Red Sea risk; gold >$3,560, BTC >$61k', source: 'Morningstar' }
+  { num: 12, region: 'europe', place: 'Kyiv', text: 'Strikes kill 2 in Kharkiv, hurt 7 in Kyiv', source: 'AP' },
+  { num: 13, region: 'europe', place: 'Kyiv', text: '250 fallen soldiers returned in swap', source: 'UNN' },
+  { num: 14, region: 'europe', place: 'London', text: '24h RMT Tube strike halts 2 lines', source: 'TfL' },
+  { num: 15, region: 'europe', place: 'Europe', text: 'DAX +2.1%, FTSE +1.75%, CAC +1.6%', source: 'Bloomberg' },
+  { num: 16, region: 'namerica', place: 'US', text: 'Trump & Rutte warn Russia on war', source: 'NATO' },
+  { num: 17, region: 'namerica', place: 'US', text: 'Markets shut; AAA sees 81.5m trips', source: 'AAA' },
+  { num: 18, region: 'namerica', place: 'NFL', text: 'Bears 39–35 Lions; Eagles 39–38 Cowboys', source: 'NFL' },
+  { num: 19, region: 'mideast', place: 'Tehran', text: 'M. Khamenei urges wider Basij role', source: 'Al-Monitor' },
+  { num: 20, region: 'mideast', place: 'Baghdad', text: 'Leaders set Dec 1 Kurdish oil talks', source: 'Anadolu' },
+  { num: 21, region: 'africa', place: 'Pretoria', text: 'SA Oct producer inflation hits 8.1%', source: 'Stats SA' },
+  { num: 22, region: 'africa', place: 'DRC', text: 'East Ebola: 12,021 cases, 5,904 dead', source: 'DRC Health' },
+  { num: 23, region: 'africa', place: 'Lusaka', text: 'Hetero ships 300k generic HIV vials', source: 'The Hindu' },
+  { num: 24, region: 'sasia', place: 'Dhaka', text: 'Central bank plans $2.6bn Sukuk bond', source: 'TBS News' },
+  { num: 25, region: 'sasia', place: 'Nepal', text: 'Notices for ~4,000 flood missing', source: 'SCMP' },
+  { num: 26, region: 'sasia', place: 'Doha', text: 'Sri Lanka A beat India A by 8 wkts', source: 'Ind. Exp.' },
+  { num: 27, region: 'eastseasia', place: 'Singapore', text: 'Nvidia pauses AI servers to 4 hubs', source: 'FT' },
+  { num: 28, region: 'eastseasia', place: 'Tokyo', text: 'Nikkei +0.86%, HSI +1.19%, Kospi +0.3%', source: 'Xinhua' },
+  { num: 29, region: 'latam', place: 'Brazil', text: 'Mid-Nov IPCA-15 eases to 0.22% MoM', source: 'IBGE' },
+  { num: 30, region: 'latam', place: 'Brasília', text: 'Embraer & ALADA sign KC-390 pact', source: 'Embraer' },
+  { num: 31, region: 'latam', place: 'Mexico', text: '2026 LatAm steel seen +3.6% (57.7 Mt)', source: 'Alacero' },
+  { num: 32, region: 'latam', place: 'Asunción', text: '2028 Copa América awarded to US', source: 'CONMEBOL' },
+  { num: 33, region: 'oceania', place: 'Canberra', text: 'Senate passes 20% LNG bill (21–10)', source: 'Guardian' },
+  { num: 34, region: 'global', place: 'Zurich', text: 'FIFA confirms <0.1% data cyberattack', source: 'FIFA' },
+  { num: 35, region: 'global', place: 'Markets', text: 'Brent >$95/bbl; gold >$3,560, BTC >$61k', source: 'Morningstar' }
 ];
 
 export const MAP_PINS = [
@@ -265,16 +235,16 @@ export const MAP_PINS = [
   { id: 2, label: 'Riyadh', region: 'mideast', lat: 24.71, lon: 46.68 },
   { id: 3, label: 'New York', region: 'namerica', lat: 40.71, lon: -74.01 },
   { id: 4, label: 'Seoul', region: 'eastseasia', lat: 37.57, lon: 126.98 },
-  { id: 6, label: 'Singapore', region: 'eastseasia', lat: 1.35, lon: 103.82 },
-  { id: 7, label: 'Bangkok', region: 'eastseasia', lat: 13.7, lon: 100.6 },
-  { id: 8, label: 'Gaza', region: 'mideast', lat: 31.42, lon: 34.35 },
-  { id: 9, label: 'Kyiv', region: 'europe', lat: 50.45, lon: 30.52 },
-  { id: 10, label: 'Flinders Is.', region: 'oceania', lat: -40.0, lon: 148.0 },
-  { id: 11, label: 'Nairobi', region: 'africa', lat: -1.29, lon: 36.82 },
-  { id: 12, label: 'Mumbai', region: 'sasia', lat: 19.08, lon: 72.88 },
-  { id: 24, label: 'Pretoria', region: 'africa', lat: -25.75, lon: 28.19 },
-  { id: 33, label: 'Brasília', region: 'latam', lat: -15.79, lon: -47.88 },
-  { id: 35, label: 'Mexico City', region: 'latam', lat: 19.43, lon: -99.13 }
+  { id: 6, label: 'Bangkok', region: 'eastseasia', lat: 13.7, lon: 100.6 },
+  { id: 7, label: 'Gaza', region: 'mideast', lat: 31.42, lon: 34.35 },
+  { id: 8, label: 'Flinders Is.', region: 'oceania', lat: -40.0, lon: 148.0 },
+  { id: 9, label: 'Nairobi', region: 'africa', lat: -1.29, lon: 36.82 },
+  { id: 10, label: 'Mumbai', region: 'sasia', lat: 19.08, lon: 72.88 },
+  { id: 12, label: 'Kyiv', region: 'europe', lat: 50.45, lon: 30.52 },
+  { id: 21, label: 'Pretoria', region: 'africa', lat: -25.75, lon: 28.19 },
+  { id: 27, label: 'Singapore', region: 'eastseasia', lat: 1.35, lon: 103.82 },
+  { id: 29, label: 'Brasília', region: 'latam', lat: -15.79, lon: -47.88 },
+  { id: 31, label: 'Mexico City', region: 'latam', lat: 19.43, lon: -99.13 }
 ];
 
 export const FORBIDDEN_TOKENS = [
@@ -331,11 +301,11 @@ export function validateEdition() {
   const errors = [];
   const allStories = [...LEADS, ...SECONDARIES, ...BRIEFS];
 
-  if (allStories.length !== 40) {
-    errors.push(`Expected 40 stories, got ${allStories.length}`);
+  if (allStories.length !== 35) {
+    errors.push(`Expected 35 stories, got ${allStories.length}`);
   }
-  if (LEADS.length !== 3 || SECONDARIES.length !== 10 || BRIEFS.length !== 27) {
-    errors.push(`Expected 3/10/27 split, got ${LEADS.length}/${SECONDARIES.length}/${BRIEFS.length}`);
+  if (LEADS.length !== 3 || SECONDARIES.length !== 8 || BRIEFS.length !== 24) {
+    errors.push(`Expected 3/8/24 split, got ${LEADS.length}/${SECONDARIES.length}/${BRIEFS.length}`);
   }
 
   // Sequential numbering 1..40

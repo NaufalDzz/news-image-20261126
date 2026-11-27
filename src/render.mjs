@@ -167,8 +167,8 @@ const DOM_AUDIT_EXPR = `(() => {
       issues.push('BRIEF_CLIPPED_IN_LOWER #' + brief.getAttribute('data-num') + ': bottom=' + br.bottom.toFixed(1) + ' lowerBottom=' + lowerRect.bottom.toFixed(1));
     }
   }
-  if (briefCount !== 27) {
-    issues.push('BRIEF_COUNT_MISMATCH: expected 27, found ' + briefCount);
+  if (briefCount !== 24) {
+    issues.push('BRIEF_COUNT_MISMATCH: expected 24, found ' + briefCount);
   }
 
   let maxTimelineBottom = 0;

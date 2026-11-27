@@ -29,7 +29,7 @@ export const LEAD_ART = {
   /**
    * #1 Brussels: Rich EU royal-blue backdrop, 12 luminous gold stars, bold tilted gold scales, crisp €1.6tn / €45bn & DEADLOCK badges
    */
-  eu_summit: () => `<svg viewBox="0 0 326 98" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+  eu_summit: () => `<svg viewBox="0 0 326 98" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
     <defs>
       <linearGradient id="euBg" x1="0" y1="0" x2="0" y2="1">
         <stop offset="0%" stop-color="#173a70"/>
@@ -70,7 +70,7 @@ export const LEAD_ART = {
   /**
    * #2 Riyadh: Saturated Arabian twilight-indigo to warm amber desert dusk, bold Kingdom Centre arch, glowing interceptor arcs & starbursts
    */
-  riyadh_missiles: () => `<svg viewBox="0 0 326 98" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+  riyadh_missiles: () => `<svg viewBox="0 0 326 98" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
     <defs>
       <linearGradient id="riyadhDusk" x1="0" y1="0" x2="0" y2="1">
         <stop offset="0%" stop-color="#1e3150"/>
@@ -120,7 +120,7 @@ export const LEAD_ART = {
   /**
    * #3 New York: Dramatic storm-slate sky, bold diagonal rain/wind streaks, Manhattan skyline, GIANT grounded Macy's 100th star balloon
    */
-  nyc_noreaster: () => `<svg viewBox="0 0 326 98" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+  nyc_noreaster: () => `<svg viewBox="0 0 326 98" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
     <defs>
       <linearGradient id="nycStorm" x1="0" y1="0" x2="1" y2="1">
         <stop offset="0%" stop-color="#2b4563"/>
@@ -171,7 +171,7 @@ export const LEAD_ART = {
 
 export const SECONDARY_ART = {
   /** #4 Seoul: Saturated teal-slate panel + stepped rate hike bars + bold 3.25% badge */
-  bok_rate: () => `<svg viewBox="0 0 194 46" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+  bok_rate: () => `<svg viewBox="0 0 194 46" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
     <rect width="194" height="46" fill="#0f5c6e"/>
     <line x1="10" y1="39" x2="110" y2="39" stroke="#bae6fd" stroke-width="1.4"/>
     <rect x="14" y="29" width="14" height="10" rx="1" fill="#7dd3fc"/>
@@ -187,7 +187,7 @@ export const SECONDARY_ART = {
   </svg>`,
 
   /** #5 London: Saturated slate-navy backdrop, crisp Big Ben, bright crimson plunge line & bold 77,000 card */
-  uk_migration: () => `<svg viewBox="0 0 194 46" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+  uk_migration: () => `<svg viewBox="0 0 194 46" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
     <rect width="194" height="46" fill="#23476d"/>
     <!-- Big Ben silhouette -->
     <g fill="#0f172a" stroke="#93c5fd" stroke-width="0.7">
@@ -207,7 +207,7 @@ export const SECONDARY_ART = {
   </svg>`,
 
   /** #6 Singapore / SE Asia: Deep emerald tech backdrop, glowing AI server rack, giant crimson-white PAUSE emblem */
-  nvidia_halt: () => `<svg viewBox="0 0 194 46" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+  nvidia_halt: () => `<svg viewBox="0 0 194 46" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
     <rect width="194" height="46" fill="#0f574f"/>
     <!-- Bright circuit traces -->
     <path d="M6,13 L42,13 M6,23 L36,23 M6,33 L42,33 M150,13 L188,13 M156,23 L188,23 M150,33 L188,33" stroke="#5eead4" stroke-width="1.8" opacity="0.72"/>
@@ -225,7 +225,7 @@ export const SECONDARY_ART = {
   </svg>`,
 
   /** #7 Bangkok: Rich amber dusk sky, dark refinery towers, vivid blaze & crisp 9 INJURED callout */
-  bangkok_refinery: () => `<svg viewBox="0 0 194 46" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+  bangkok_refinery: () => `<svg viewBox="0 0 194 46" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
     <rect width="194" height="46" fill="#e8ba7d"/>
     <!-- Rising charcoal smoke plume -->
     <circle cx="88" cy="14" r="10.5" fill="#475569" opacity="0.88"/>
@@ -244,26 +244,27 @@ export const SECONDARY_ART = {
     <text x="150" y="32" text-anchor="middle" fill="#1e293b" font-family="'Noto Sans', sans-serif" font-size="8.2" font-weight="800">UNIT HALTED</text>
   </svg>`,
 
-  /** #8 Gaza: Saturated warm terracotta editorial backdrop + high-contrast architectural silhouette & smoke */
-  gaza_strike: () => `<svg viewBox="0 0 194 46" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-    <rect width="194" height="46" fill="#d9b486"/>
+  /** #7 Gaza: Saturated warm terracotta editorial backdrop + architectural silhouette + 9+ DEAD badge */
+  gaza_strike: () => `<svg viewBox="0 0 194 46" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+    <rect width="194" height="46" fill="#d4a36a"/>
     <!-- Charcoal smoke column -->
-    <path d="M110,20 Q118,10 130,8 Q142,6 150,2" fill="none" stroke="#334155" stroke-width="6.5" stroke-linecap="round" opacity="0.78"/>
-    <path d="M105,20 Q108,12 120,10" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" opacity="0.82"/>
+    <path d="M84,20 Q90,10 100,8 Q110,6 116,2" fill="none" stroke="#334155" stroke-width="6" stroke-linecap="round" opacity="0.8"/>
     <!-- High-contrast ochre & charcoal blocks -->
-    <rect x="14" y="20" width="34" height="22" fill="#8b6944" stroke="#3f2d1b" stroke-width="1.3"/>
-    <rect x="54" y="11" width="40" height="31" fill="#6e5234" stroke="#2c1f12" stroke-width="1.4"/>
-    <path d="M101,42 L101,21 L115,25 L127,15 L146,19 L146,42 Z" fill="#1f2937" stroke="#0f172a" stroke-width="1.4"/>
-    <rect x="152" y="25" width="28" height="17" fill="#8b6944" stroke="#3f2d1b" stroke-width="1.3"/>
+    <rect x="10" y="19" width="26" height="23" fill="#7c5936" stroke="#3f2d1b" stroke-width="1.3"/>
+    <rect x="40" y="11" width="32" height="31" fill="#5e4328" stroke="#2c1f12" stroke-width="1.4"/>
+    <path d="M77,42 L77,22 L89,25 L98,16 L108,20 L108,42 Z" fill="#1f2937" stroke="#0f172a" stroke-width="1.4"/>
     <g fill="#f5e6cf">
-      <rect x="62" y="17" width="6" height="5"/><rect x="76" y="17" width="6" height="5"/>
-      <rect x="62" y="26" width="6" height="5"/><rect x="76" y="26" width="6" height="5"/>
+      <rect x="46" y="17" width="5" height="5"/><rect x="58" y="17" width="5" height="5"/>
+      <rect x="46" y="26" width="5" height="5"/><rect x="58" y="26" width="5" height="5"/>
     </g>
-    <rect x="6" y="41" width="182" height="5" fill="#2c1f12"/>
+    <rect x="4" y="41" width="186" height="5" fill="#2c1f12"/>
+    <rect x="114" y="6" width="72" height="31" rx="4" fill="#ffffff" stroke="#7f1d1d" stroke-width="1.6"/>
+    <text x="150" y="20.5" text-anchor="middle" fill="#b91c1c" font-family="'Noto Sans', sans-serif" font-size="13" font-weight="800">9+ DEAD</text>
+    <text x="150" y="32" text-anchor="middle" fill="#1e293b" font-family="'Noto Sans', sans-serif" font-size="8.2" font-weight="800">DEIR AL-BALAH</text>
   </svg>`,
 
   /** #9 Kyiv / Kharkiv: Bold Ukrainian cobalt sky + gold horizon, dark skyline, bright emergency cross */
-  ukraine_strikes: () => `<svg viewBox="0 0 194 46" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+  ukraine_strikes: () => `<svg viewBox="0 0 194 46" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
     <rect width="194" height="27" fill="#1d4e89"/>
     <rect y="27" width="194" height="19" fill="#eab308"/>
     <!-- Alert radar sweep -->
@@ -282,7 +283,7 @@ export const SECONDARY_ART = {
   </svg>`,
 
   /** #10 Flinders Island, Oceania: Dramatic bushfire crimson-amber sky, Tasmanian ridge, roaring flames & 14,000+ HA badge */
-  flinders_fire: () => `<svg viewBox="0 0 194 46" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+  flinders_fire: () => `<svg viewBox="0 0 194 46" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
     <defs>
       <linearGradient id="fireSky" x1="0" y1="0" x2="0" y2="1">
         <stop offset="0%" stop-color="#9a3412"/>
@@ -302,7 +303,7 @@ export const SECONDARY_ART = {
   </svg>`,
 
   /** #11 Nairobi: Rich forest-emerald backdrop, bold golden gavel, crisp prohibition-halted medical emblem + SITE HALTED */
-  kenya_court: () => `<svg viewBox="0 0 194 46" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+  kenya_court: () => `<svg viewBox="0 0 194 46" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
     <rect width="194" height="46" fill="#1b5e43"/>
     <!-- Bold golden sound block & gavel -->
     <rect x="14" y="35" width="58" height="7.5" rx="2" fill="#f59e0b" stroke="#451a03" stroke-width="1.2"/>
@@ -322,29 +323,29 @@ export const SECONDARY_ART = {
     <text x="155" y="32.5" text-anchor="middle" fill="#1e293b" font-family="'Noto Sans', sans-serif" font-size="8.2" font-weight="800">45d ORDER</text>
   </svg>`,
 
-  /** #12 Mumbai / Delhi: Rich warm saffron-amber editorial backdrop, Gateway of India arch & glowing candles */
-  india_2611: () => `<svg viewBox="0 0 194 46" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+  /** #10 Mumbai / Delhi: Rich warm saffron-amber editorial backdrop, Gateway of India arch & 18 YEARS badge */
+  india_2611: () => `<svg viewBox="0 0 194 46" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
     <rect width="194" height="46" fill="#d99f5b"/>
     <!-- Crisp Indian tricolour top stripe -->
     <rect x="0" y="0" width="194" height="3.5" fill="#ea580c"/>
     <rect x="0" y="3.5" width="194" height="3" fill="#ffffff"/>
     <rect x="0" y="6.5" width="194" height="3.5" fill="#15803d"/>
     <!-- Bold Gateway of India silhouette -->
-    <path d="M20,42 L20,17 L31,11 L42,17 L80,17 L91,11 L102,17 L102,42 L76,42 L76,29 A14,14 0 0,0 48,29 L48,42 Z" fill="#5c3614" stroke="#2d1807" stroke-width="1.4"/>
-    <rect x="14" y="41" width="96" height="5" fill="#2d1807"/>
-    <!-- Radiant memorial candles -->
-    <g transform="translate(124,20)">
-      <rect x="0" y="8" width="8" height="14" rx="1" fill="#ffffff" stroke="#5c3614" stroke-width="1.2"/>
-      <ellipse cx="4" cy="4" rx="3.2" ry="4.5" fill="#fef08a"/>
-      <rect x="17" y="4" width="9" height="18" rx="1" fill="#ffffff" stroke="#5c3614" stroke-width="1.2"/>
-      <ellipse cx="21.5" cy="-0.5" rx="3.6" ry="5" fill="#fef08a"/>
-      <rect x="35" y="9" width="8" height="13" rx="1" fill="#ffffff" stroke="#5c3614" stroke-width="1.2"/>
-      <ellipse cx="39" cy="5" rx="3.2" ry="4.5" fill="#fef08a"/>
+    <path d="M12,42 L12,18 L22,12 L32,18 L66,18 L76,12 L86,18 L86,42 L62,42 L62,30 A13,13 0 0,0 36,30 L36,42 Z" fill="#5c3614" stroke="#2d1807" stroke-width="1.4"/>
+    <rect x="8" y="41" width="84" height="5" fill="#2d1807"/>
+    <!-- Glowing memorial candle -->
+    <g transform="translate(95,22)">
+      <rect x="0" y="6" width="7" height="14" rx="1" fill="#ffffff" stroke="#5c3614" stroke-width="1.2"/>
+      <ellipse cx="3.5" cy="2.5" rx="3" ry="4.2" fill="#fef08a"/>
     </g>
+    <!-- High-contrast anniversary badge -->
+    <rect x="110" y="11" width="76" height="30" rx="4" fill="#ffffff" stroke="#15803d" stroke-width="1.6"/>
+    <text x="148" y="25" text-anchor="middle" fill="#166534" font-family="'Noto Sans', sans-serif" font-size="13" font-weight="800">18 YEARS</text>
+    <text x="148" y="36" text-anchor="middle" fill="#9a3412" font-family="'Noto Sans', sans-serif" font-size="8.2" font-weight="800">26/11 · 77th CONST.</text>
   </svg>`,
 
   /** #13 Geneva: Deep tournament forest-green felt, crisp chessboard + giant King/Knight + bold 1½–1½ clock */
-  chess_game3: () => `<svg viewBox="0 0 194 46" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+  chess_game3: () => `<svg viewBox="0 0 194 46" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
     <rect width="194" height="46" fill="#164e3a"/>
     <!-- Crisp chessboard squares -->
     <g stroke="#0f2f23" stroke-width="0.7">
